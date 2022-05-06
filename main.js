@@ -1,7 +1,7 @@
 const center = document.getElementById("center"); // define center to use it global
 // i defined the url which i need to fetch as a const to use it comfortable
 const URL = "https://swapi.dev/api/films";
-let page = 0;
+let page = 0; // define page to use it in second blur page to move between pages
 
 async function get_data() {
   // make my blur screen empty
@@ -20,8 +20,8 @@ async function get_data() {
   ul1.id = "ul_1"; // give ul a id
 
   center.appendChild(ul1); // append ul to center block
-  
-  // fetching data from URL
+
+  // fetching data from URL by calling get_movie_name function
   await get_movie_name(4);
   await get_movie_name(5);
   await get_movie_name(6);
@@ -30,34 +30,44 @@ async function get_data() {
   await get_movie_name(3);
 }
 
-async function get_movie_name(ith_film) {
-  const film = await fetch(`${URL}/${ith_film}`);
 
+async function get_movie_name(ith_film) {
+  // fetching ith film from URL by adding ith_film variabel to URL 
+  const film = await fetch(`${URL}/${ith_film}`); 
+ // fetching json data from ith film
   const data = await film.json();
 
+  // creating a li element to show the name of film
   const ul1 = document.getElementById("ul_1");
   const li1 = document.createElement("li");
-  const div_starship = document.createElement("div");
-  div_starship.className = "div_starship";
+  const div_starship = document.createElement("div"); // create a div to show starships
+  div_starship.className = "div_starship"; // give div a classname
 
+  
   const p1 = document.createElement("p");
   const p2 = document.createElement("p");
   const p3 = document.createElement("p");
-
-  const button = document.createElement("button");
-  button.className = "button";
-  button.innerText = "Starships";
-  button.onclick = () => partition(data.starships);
-
+  
+  // according to pdf file i set p1 p2 p3 to one properties of film
   p1.innerText = data.title;
   p2.innerText = data.episode_id;
   p3.innerText = data.release_date;
 
+  // creating a button to show the "starships" in front of every films
+  const button = document.createElement("button");
+  button.className = "button"; // give button a classname
+  button.innerText = "Starships"; // give button a value
+  button.onclick = () => partition(data.starships); // when button is clicked, call partition function
+
+  // appending p1 p2 p3 to div_starship
   div_starship.appendChild(p1);
   div_starship.appendChild(p2);
   div_starship.appendChild(p3);
   div_starship.appendChild(button);
+
+  // appending div_starship to li1
   li1.appendChild(div_starship);
+  // appending li1 to ul1
   ul1.appendChild(li1);
 }
 
@@ -151,8 +161,8 @@ async function fetch_right(data) {
   div_right.appendChild(p3);
   div_right.appendChild(p4);
 
-  const show = document.querySelector("#right"); // right is class name
-  show.innerHTML = "";
+  const show = document.querySelector("#right"); // right is class name 
+  show.innerHTML = ""; // make right empty to use it as a new page
   show.appendChild(div_right);
 }
 function makeButton(data, ships) {
@@ -169,9 +179,10 @@ function makeButton(data, ships) {
   but2.innerText = "Prev";
   but3.innerText = "Back";
 
+  // page label for down div which includes buttons
   p.innerText = `PAGE-${page + 1}`;
-  but3.onclick = () => get_data();
-
+  but3.onclick = () => get_data();  // when back button is clicked, call get_data function
+  // append buttons to div
   div2.appendChild(but2);
   div2.appendChild(p);
   div2.appendChild(but1);
@@ -179,11 +190,12 @@ function makeButton(data, ships) {
   div.appendChild(but3);
 }
 
+// check length of data and if it is less than 10 then allow to go to next page
 function upPage(data, ships) {
-  console.log(page);
-  if (ships.length == 10) {
+  if (ships.length == 10) //  checking condition to allow to go to next page
+   {
     page = page + 1;
-    partition(data);
+    partition(data); // call partition function when next button is clicked 
   }
 }
 

@@ -33,6 +33,7 @@ button {
   margin-top: 1rem; /* take away from top of block*/
   text-align: center;
   color: rgb(255, 0, 0);
+  font-style: italic;
 }
 .div_starship {
   display: flex;
@@ -40,8 +41,10 @@ button {
   margin-right: 2rem;
 }
 .button {
-  background-color: rgb(24, 134, 7);
-  color: white;
+  background-color: rgb(10, 123, 50);
+  color: rgb(0, 0, 0);
+  font-size: 120%;
+  font-style: italic;
   border: none;
   cursor: pointer;
 }
@@ -49,15 +52,18 @@ li {
   margin-left: 3rem;
   margin-top: 2rem;
   color: rgb(210, 246, 32);
+  font-style: italic;
   margin-left: 4rem;
 }
 .button2 {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: white;
+  color: rgb(255, 0, 0);
+  font-size: large;
+  font-style:italic ;
 }
 .li_2 {
-  margin-top: 0.9rem;
+  margin-top: 0.7rem;
   text-align: center;
 }
 
@@ -78,40 +84,52 @@ li {
 .left_header {
   margin-top: 1rem;
   text-align: center;
+  font-style: italic;
+  margin-left: 3.5rem;
 }
 .right_header {
   color: rgb(32, 183, 203);
+  font-style: italic;
   text-align: center;
   margin-top: 1rem;
 }
 .div_right {
   text-align: center;
-
+  
   /*  second page information styles  */
 }
 .model_info {
   margin-top: 2rem;
   color: white;
+  font-style: italic;
+  font-size: large;
   text-align: center;
 }
 .manufacturer {
   margin-top: 2rem;
   color: white;
+  font-style: italic;
+  font-size: large;
   text-align: center;
 }
 .crew {
   margin-top: 2rem;
   color: white;
+  font-style: italic;
+  font-size: large;
   text-align: center;
 }
 .passengers {
   margin-top: 2rem;
   color: white;
+  font-size: large;
+  font-style: italic;
   text-align: center;
 }
 .buttomsDiv {
   display: flex;
   justify-content: space-evenly;
+  font-style: italic;
   margin-bottom: 0.5rem;
 }
 .upDiv {
