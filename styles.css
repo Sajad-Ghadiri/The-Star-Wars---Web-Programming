@@ -1,11 +1,16 @@
+/* set margin and padding of universal selector to avoid scrolbar */
 * {
   margin: 0;
   padding: 0;
 }
+/* set width and height of body tag*/
 body {
   width: 100vw;
   height: 100vh;
 }
+/* set color and width and height for center element and class*/
+/* i set border radius to make my blur triangle div beautiful*/
+/* also use solid in border to seperate center blur page from background better*/
 .center {
   color: rgb(35, 203, 32);
   height: 60%;
@@ -14,9 +19,13 @@ body {
   border-radius: 5rem;
   backdrop-filter: blur(0.8rem);
 }
+/* to give user better feeling when going on text i set curser eqaul to pointer*/
 button {
   cursor: pointer;
 }
+/* set main page */
+/* using justify content for data which we will take from fetching to the center*/
+/* i set display flex too and gave backgrounf image path*/
 .main {
   height: 100%;
   width: 100%;
@@ -29,25 +38,40 @@ button {
   background-position: center;
 }
 
-.customize {
+/******************** All font-style of my page is italic *******************/
+
+
+/* set "the star war movie" 's color to red */
+/* using text align with center value to manage text and data */
+/* set margin from top 1rem to look better*/
+.main_header {
   margin-top: 1rem; /* take away from top of block*/
   text-align: center;
   color: rgb(255, 0, 0);
   font-style: italic;
 }
+
+/* i used display wuth flex value and also set justify contert to space-between */
+/* cause the first item is flush with the start and the last is flush with the end*/
 .div_starship {
   display: flex;
   justify-content: space-between;
   margin-right: 2rem;
 }
+/* made starships's background  of all films green */
+/* i set starships text bigger and there were no need to use border*/
+/* i used border-raduis to make triangles of starships button beautiful*/
 .button {
   background-color: rgb(10, 123, 50);
   color: rgb(0, 0, 0);
   font-size: 120%;
   font-style: italic;
-  border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
+
+/* li contains our fetched data */
+/* i set margins to align better and set color to yellow */
 li {
   margin-left: 3rem;
   margin-top: 2rem;
@@ -55,6 +79,9 @@ li {
   font-style: italic;
   margin-left: 4rem;
 }
+/* every thing is clear :) */
+/* all class names referred to js file :) */
+/* i set colors and width and height and margins for better look and make pages beautiful*/
 .button2 {
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -95,8 +122,10 @@ li {
 }
 .div_right {
   text-align: center;
-  
-  /*  second page information styles  */
+
+  /*  second page styles is for information of fetched data   */
+  /* all colors set to white and make them large for better look */
+  /* also set margins and text align to center  */
 }
 .model_info {
   margin-top: 2rem;
@@ -126,16 +155,19 @@ li {
   font-style: italic;
   text-align: center;
 }
+/**************************************************************/
 .buttomsDiv {
   display: flex;
   justify-content: space-evenly;
   font-style: italic;
   margin-bottom: 0.5rem;
 }
+/* seperate left side fiv to 2 part */
+/* up part is for our contents and down part is for next and back buttons*/
 .upDiv {
   height: 85%;
 }
 .downDiv {
   height: 15%;
 }
-/*  ***********************************  */
+/*  **********************************************************/

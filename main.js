@@ -9,7 +9,7 @@ async function get_data() {
   center.innerHTML = "";
   // making header for first blur page
   const header = document.createElement("h1");
-  header.className = "customize"; // give header a classname
+  header.className = "main_header"; // give header a classname
   header.innerText = "The Star Wars Movies"; // give header a value
 
   center.appendChild(header);
