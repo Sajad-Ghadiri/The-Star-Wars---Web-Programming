@@ -7,19 +7,21 @@ async function get_data() {
   // make my blur screen empty
   page = 0;
   center.innerHTML = "";
-
+  // making header for first blur page
   const header = document.createElement("h1");
-  header.className = "customize";
-  header.innerText = "The Star Wars Movies";
+  header.className = "customize"; // give header a classname
+  header.innerText = "The Star Wars Movies"; // give header a value
 
   center.appendChild(header);
-
+  
+  // making a ul for first blur page
   const ul1 = document.createElement("ul");
   ul1.className = "ulcss";
-  ul1.id = "ul_1";
+  ul1.id = "ul_1"; // give ul a id
 
-  center.appendChild(ul1);
-
+  center.appendChild(ul1); // append ul to center block
+  
+  // fetching data from URL
   await get_movie_name(4);
   await get_movie_name(5);
   await get_movie_name(6);

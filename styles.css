@@ -22,15 +22,15 @@ button {
   width: 100%;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* set div blur box in center */
   align-items: center;
-  background-image: url("background1.jpg");
+  background-image: url("background1.jpg"); /* give the background address in this folder */
   background-size: cover;
   background-position: center;
 }
 
 .customize {
-  margin-top: 1rem;
+  margin-top: 1rem; /* take away from top of block*/
   text-align: center;
   color: rgb(255, 0, 0);
 }
